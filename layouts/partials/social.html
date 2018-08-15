@@ -1,0 +1,8 @@
+{{- range $name, $path := .Site.Params.social }}
+{{- if $path }}
+{{- $realName := split $name "." }}
+<a target="_blank" href="{{ $path | safeURL }}">
+  <i class="{{ index $realName 1 }} {{ index $realName 2 }}" aria-hidden="true"></i>
+</a>
+{{- end }}
+{{- end }}

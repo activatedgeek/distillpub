@@ -1,0 +1,65 @@
+<dt-footer>
+  <style>
+  dt-footer {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    padding: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: hsl(200, 60%, 15%);
+    text-align: center;
+  }
+
+  dt-footer .logo {
+    font-size: 1em;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-right: 1em;
+  }
+  dt-footer .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+  }
+  dt-footer .nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  dt-footer .nav a i {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.25em;
+  }
+
+  dt-footer .footer-close p {
+    margin: 0;
+  }
+
+  dt-footer .footer-close a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  </style>
+  
+  <div class="l-page">
+    <div class="nav">
+      {{ partial "social" . }}
+    </div>
+
+    <div>
+      <a href="/" class="logo">{{ .Site.Title }}</a>
+      {{ if .Site.Params.Description }}
+        {{ .Site.Params.description | safeHTML }}
+      {{- end -}}
+    </div>
+
+    <div class="footer-close">
+      <p>&copy; {{ now.Format "2006" }}</p>
+      <p>Made with <i class="fas fa-heart" aria-hidden="true"></i></p>
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
+    </div>
+  </div>
+</dt-footer>
+

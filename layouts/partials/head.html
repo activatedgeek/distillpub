@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <meta name="referrer" content="no-referrer-when-downgrade">
@@ -10,8 +10,8 @@
 {{ .Hugo.Generator }}
 
 <meta name="application-name" content="{{ .Site.Title }}">
-<meta name="theme-color" content="#0f2e3d">
-<meta name="msapplication-navbutton-color" content="#0f2e3d">
+<meta name="theme-color" content="{{ .Site.Params.color }}">
+<meta name="msapplication-navbutton-color" content="{{ .Site.Params.color }}">
 
 {{- if .Description -}}
   <meta name="description" content="{{ .Description | safeHTML }}" />
@@ -34,7 +34,7 @@
 <!-- TODO: Icons -->
 <link rel="icon" sizes="192x192" href="/path/to/icon.png">
 <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
-<link rel="mask-icon" href="/path/to/icon.svg" color="#0f2e3d">
+<link rel="mask-icon" href="/path/to/icon.svg" color="{{ .Site.Params.color }}">
 
 {{ if .RSSLink -}}
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />

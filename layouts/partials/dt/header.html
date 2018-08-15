@@ -1,0 +1,48 @@
+<dt-header>
+  <style>
+    dt-header {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: {{ .Site.Params.color }};
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 5em;
+      z-index: 2;
+      color: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+      min-height: 4em;
+    }
+
+    dt-header a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    dt-header a:hover {
+      color: white;
+    }
+
+    dt-header .nav {
+      float: right;
+      font-weight: 300;
+    }
+    dt-header .nav a {
+      font-size: 0.8em;
+      margin-left: 1.5em;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <div class="content l-page">
+    <a href="/" class="logo">{{ .Site.Title }}</a>
+    <div class="nav">
+      <a href="/about">About</a>
+      {{- if .RSSLink -}}
+      <a href="{{ .RSSLink }}">RSS</a>
+      {{ else if .Site.RSSLink }}
+        <a href="{{ .Site.RSSLink }}">RSS</a>
+      {{- end -}}
+    </div>
+  </div>
+</dt-header>
