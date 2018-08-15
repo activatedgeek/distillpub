@@ -1,0 +1,12 @@
+name = "Distillpub"
+license = "MIT"
+licenselink = "https://github.com/activatedgeek/distillpub/blob/master/LICENSE"
+description = "Hugo theme for Distill articles"
+homepage = "https://github.com/activatedgeek/distillpub"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Sanyam Kapoor"
+  homepage = "https://www.sanyamkapoor.com"
