@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta name="robots" content="index,follow">
+<base href="{{ .Site.BaseURL }}">
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ .Hugo.Generator }}
+
+<meta name="application-name" content="{{ .Site.Title }}">
+<meta name="theme-color" content="#0f2e3d">
+<meta name="msapplication-navbutton-color" content="#0f2e3d">
+
+{{- if .Description -}}
+  <meta name="description" content="{{ .Description | safeHTML }}" />
+{{ else if .Site.Params.Description }}
+  <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
+{{- end -}}
+
+{{- if .Keywords -}}
+  <meta name="keywords" content='{{ delimit .Keywords "," }}' />
+{{ else if .Site.Params.Keywords }}
+  <meta name="keywords" content='{{ delimit .Site.Params.Keywords "," }}' />
+{{- end -}}
+
+{{- if .Author -}}
+  <meta name="author" content='{{ .Author }}' />
+{{ else if .Authors }}
+  <meta name="author" content='{{ delimit .Authors "," }}' />
+{{- end -}}
+
+<!-- TODO: Icons -->
+<link rel="icon" sizes="192x192" href="/path/to/icon.png">
+<link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
+<link rel="mask-icon" href="/path/to/icon.svg" color="#0f2e3d">
+
+{{ if .RSSLink -}}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end -}}
+
+<title>{{ .Title }}</title>
+
+<!-- See https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates -->
+{{- template "_internal/disqus.html" . -}}
+{{- template "_internal/google_analytics_async.html" . -}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/schema.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
