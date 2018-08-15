@@ -4,7 +4,7 @@
     display: block;
     color: rgba(255, 255, 255, 0.4);
     font-weight: 300;
-    padding: 40px 0;
+    padding: 2em 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     background-color: hsl(200, 60%, 15%);
     text-align: center;
@@ -48,17 +48,13 @@
       {{ partial "social" . }}
     </div>
 
-    <div>
-      <a href="/" class="logo">{{ .Site.Title }}</a>
-      {{ if .Site.Params.Description }}
-        {{ .Site.Params.description | safeHTML }}
-      {{- end -}}
-    </div>
-
     <div class="footer-close">
       <p>&copy; {{ now.Format "2006" }}</p>
-      <p>Made with <i class="fas fa-heart" aria-hidden="true"></i></p>
-      <p>Powered by <a href="https://gohugo.io/">Hugo</a></p>
+      <p>
+        <i class="fas fa-bolt" aria-hidden="true"></i> by <a target="_blank" href="https://gohugo.io/">Hugo</a> | 
+        <i class="fas fa-paint-brush" aria-hidden="true"></i> by <a target="_blank" href="https://distill.pub/">Distill</a> |
+        <i class="fas fa-code" aria-hidden="true"></i> by <a target="_blank" href="https://github.com/activatedgeek">@activatedgeek</a>
+      </p>
     </div>
   </div>
 </dt-footer>
