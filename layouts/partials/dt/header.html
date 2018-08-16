@@ -38,12 +38,12 @@
     <a href="/" class="logo">{{ .Site.Title }}</a>
     <div class="nav">
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}">{{ .Title }}</a> 
+        <a target="_blank" href="{{ .URL }}">{{ .Title }}</a> 
       {{ end }}
       {{- if .RSSLink -}}
-      <a href="{{ .RSSLink }}">RSS</a>
+        <a target="_blank" href="{{ .RSSLink }}">RSS</a>
       {{ else if .Site.RSSLink }}
-        <a href="{{ .Site.RSSLink }}">RSS</a>
+        <a target="_blank" href="{{ .Site.RSSLink }}">RSS</a>
       {{- end -}}
     </div>
   </div>
