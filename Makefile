@@ -11,4 +11,5 @@ devel:
 
 netlify:
 		# Netlify clones under folder "repo"
-		cd $(BUILD_DIR) && hugo $(BUILD_OPTS) -t repo
+		cd .. && ln -s repo distillpub
+		make example
