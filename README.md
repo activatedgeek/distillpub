@@ -1,4 +1,4 @@
-# Distill
+# DistillPub
 
 ![Status Alpha](https://img.shields.io/badge/status-alpha-orange.svg)
 
