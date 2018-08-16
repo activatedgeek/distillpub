@@ -18,3 +18,12 @@ theme = "distillpub"
   "d.fab.fa-linkedin" = "https://linkedin.com/in/sanyamkapoor"
   "e.fab.fa-stack-overflow" = "https://stackoverflow.com/users/2425365"
   "f.fab.fa-twitter" = "https://twitter.com/activatedgeek"
+
+[menu]
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About Hugo"
+  title = "about"
+  url = "/about"
+  weight = -10
