@@ -13,7 +13,7 @@ theme = "distillpub"
 
   [params.social]
   "a.fab.fa-google" = "https://scholar.google.com/citations?user=p0NMtgsAAAAJ"
-  "b.fab.fa-github" = "https://github.com/activatedgeek"
+  "b.fab.fa-github" = "https://github.com/activatedgeek/distillpub"
   "c.fab.fa-hacker-news" = "https://news.ycombinator.com/user?id=activatedgeek"
   "d.fab.fa-linkedin" = "https://linkedin.com/in/sanyamkapoor"
   "e.fab.fa-stack-overflow" = "https://stackoverflow.com/users/2425365"

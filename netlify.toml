@@ -1,0 +1,3 @@
+[build]
+  publish = "exampleSite/public"
+  command = "make netlify"
