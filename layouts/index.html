@@ -1,12 +1,10 @@
 {{ define "content" }}
 <d-front-matter>
-  <script type="text/json">
-    {
-      "title": "{{ .Title }}",
-      "description": "{{ .Description }}",
-      "authors": []
-    }
-  </script>
+  <script type="text/json">{
+    "title": "{{ .Title }}",
+    "description": "{{ .Description }}",
+    "authors": []
+  }</script>
 </d-front-matter>
 
 <div class="l-page">
@@ -111,6 +109,7 @@
             <div class="title-desc">
               <h1 class="title">{{ .Title }}</h1>
               <p class="desc">{{ .Description }}</p>
+              <!-- TODO: Add optional image -->
             </div>
           </div>
         </li>

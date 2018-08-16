@@ -1,3 +1,51 @@
 {{ define "content" }}
-{{ .Content }}
+<d-front-matter>
+  <script type="text/json">{
+    "title": "{{ .Title }}",
+    "description": "{{ .Description }}",
+    "authors": [
+      {{ if .Authors }}
+      {{ range .Authors }}
+        {
+          "author": "{{ .Author }}",
+          "authorURL": {{ .AuthorURL }},
+          "affiliations": [
+            {{ if .Affiliations }}
+            {{ range .Affiliations }}
+              {
+                "name": "{{ .Name }}",
+                "url": "{{ .URL }}",
+              },
+            {{ end }}
+            {{ end }}
+          ]
+        },
+      {{ end }}
+      {{ end }}
+    ],
+    "katex": {
+      "delimiters": [
+        {"left": "$$", "right": "$$", "display": false}
+      ]
+    }
+  }</script>
+</d-front-matter>
+
+<!-- TODO: Parametrize these. Shortcodes? -->
+<d-article>
+  {{ .Content }}
+</d-article>
+
+<d-appendix>
+
+  <h3>Contributions</h3>
+  <p>Some text describing who did what.</p>
+  <h3>Reviewers</h3>
+  <p>Some text with links describing who reviewed the article.</p>
+
+  {{ if .Page.Params.Bibliography }}
+    <d-bibliography src="{{ .Page.Params.Bibliography }}"></d-bibliography>
+  {{ end }}
+</d-appendix>
+
 {{ end }}
