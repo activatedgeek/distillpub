@@ -1,13 +1,65 @@
 {{ define "content" }}
-<dt-article>
+<d-front-matter>
+  <script type="text/json">
+    {
+      "title": "{{ .Title }}",
+      "description": "{{ .Description }}",
+      "authors": []
+    }
+  </script>
+</d-front-matter>
+
+<div class="l-page">
   <style>
-  dt-article {
-    display: flex;
-    box-sizing: border-box;
-    padding: 1em;
-  }
+    .l-page {
+      box-sizing: border-box;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .l-page .pagination {
+      padding: 0;
+      list-style: none;
+      color: hsla(206, 90%, 20%, 0.7);
+    }
+
+    .l-page .pagination .page-item .page-link {
+      text-decoration: none;
+    }
+
+    .l-page .pagination .page-item {
+      display: inline-block;
+    }
+
+    .l-page .pagination .page-item .page-link {
+      padding: 0.1em 0.5em;
+    }
+
+    .l-page .pagination > :nth-child(n+3):nth-last-child(n+3) {
+      border: solid {{ .Site.Params.color }} 1px;
+    }
+
+    .l-page .pagination .page-item.active {
+      background-color: {{ .Site.Params.color }};
+      border: none;
+    }
+
+    .l-page .pagination .page-item.active .page-link {
+      color: white;
+    }
+
+    .l-page .pagination .page-item.disabled {
+      pointer-events: none;
+    }
   </style>
-  <div class="l-page">
-  </div>
-</dt-article>
+
+  {{ $paginator := .Paginate .Pages }}
+
+  {{ range $paginator.Pages }}
+    {{ .Title }}
+  {{ end }}
+  
+  {{ template "_internal/pagination.html" . }}
+</div>
+
 {{ end }}
