@@ -99,11 +99,11 @@
   {{ $paginator := .Paginate .Pages }}
   <ul class="paginated-list">
     {{ range $paginator.Pages }}
-      <a class="page-link" target="_blank" href="{{ .URL }}">
+      <a class="page-link" target="_blank" href="{{ .RelPermalink }}">
         <li class="page">
           <div class="page-preview">
             <div class="date-tags">
-              <p>{{ now.Format "Jan 2, 2006" }}</p>
+              <p>{{ dateFormat "Jan 2, 2006" .Date }}</p>
               <!-- TODO: Add kind/tags -->
             </div>
             <div class="title-desc">
