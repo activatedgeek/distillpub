@@ -1,27 +1,27 @@
 {{ define "content" }}
+
 <d-front-matter>
   <script type="text/json">{
     "title": "{{ .Title }}",
     "description": "{{ .Description }}",
+    "published": "{{ dateFormat "Jan 2, 2006" .Date }}",
     "authors": [
-      {{ if .Authors }}
-      {{ range .Authors }}
+      {{- if .Params.DAuthors -}}
+      {{- range $ax, $author := .Params.DAuthors }}
         {
-          "author": "{{ .Author }}",
-          "authorURL": {{ .AuthorURL }},
+          "author": "{{ $author.author }}",
+          "authorURL": "{{ $author.authorURL }}",
           "affiliations": [
-            {{ if .Affiliations }}
-            {{ range .Affiliations }}
+            {{ range $bx, $affiliation := $author.affiliations }}
               {
-                "name": "{{ .Name }}",
-                "url": "{{ .URL }}",
-              },
-            {{ end }}
+                "name": "{{ $affiliation.name }}",
+                "url": "{{ $affiliation.url }}"
+              }{{ if (lt (add $bx 1) (len $author.affiliations)) }},{{ end }}
             {{ end }}
           ]
-        },
-      {{ end }}
-      {{ end }}
+        }{{ if (lt (add $ax 1) (len $.Params.DAuthors)) }},{{ end }}
+      {{- end -}}
+      {{- end }}
     ],
     "katex": {
       "delimiters": [
@@ -31,17 +31,17 @@
   }</script>
 </d-front-matter>
 
-<!-- TODO: Parametrize these. Shortcodes? -->
+<d-title>
+  <!-- TODO: Parametrize this section. How? -->
+</d-title>
+
 <d-article>
+  <!-- TODO: Parametrize this section. How? -->
   {{ .Content }}
 </d-article>
 
 <d-appendix>
-
-  <h3>Contributions</h3>
-  <p>Some text describing who did what.</p>
-  <h3>Reviewers</h3>
-  <p>Some text with links describing who reviewed the article.</p>
+  <!-- TODO: Parametrize this section. How? -->
 
   {{ if .Page.Params.Bibliography }}
     <d-bibliography src="{{ .Page.Params.Bibliography }}"></d-bibliography>
