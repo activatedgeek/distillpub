@@ -8,3 +8,7 @@ example:
 
 devel:
 		cd $(BUILD_DIR) && hugo server $(BUILD_OPTS)
+
+netlify:
+		# Netlify clones under folder "repo"
+		cd $(BUILD_DIR) && hugo $(BUILD_OPTS) -t repo
