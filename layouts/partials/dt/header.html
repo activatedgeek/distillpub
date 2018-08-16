@@ -1,13 +1,10 @@
 <d-header>
   <style>
     d-header {
-      display: flex;
+      display: block;
       align-items: center;
-      position: relative;
       background-color: {{ .Site.Params.color }};
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0;
+      padding: 2em 4em;
       z-index: 2;
       color: rgba(0, 0, 0, 0.8);
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -37,7 +34,7 @@
     }
   </style>
 
-  <div class="content l-page">
+  <div class="content">
     <a href="/" class="logo">{{ .Site.Title }}</a>
     <div class="nav">
       {{ range .Site.Menus.main }}
