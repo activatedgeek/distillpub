@@ -7,6 +7,7 @@ theme = "distillpub"
 [params]
   description = "Distill Hugo Theme Demo"
   keywords = ["hugo", "distill", "theme"]
+  sourcePrefix = "https://github.com/activatedgeek/distillpub/blob/master/exampleSite"
 
   color = "#0f2e3d"
 
