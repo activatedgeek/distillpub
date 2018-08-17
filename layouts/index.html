@@ -1,8 +1,9 @@
 {{ define "body" }}
+
 <d-front-matter>
   <script type="text/json">{
-    "title": "{{ .Title }}",
-    "description": "{{ .Description }}",
+    "title": "{{ .Site.Title }}",
+    "description": "{{ .Site.Params.Description }}",
     "authors": []
   }</script>
 </d-front-matter>
@@ -74,17 +75,24 @@
       align-items: center;
       height: 100%;
     }
-    .l-page .page-preview .date-tags {
-      display: flex;
+    .l-page .page-preview .meta {
       align-items: center;
       justify-content: flex-start;
       padding: 1em 4em 1em 0;
       box-sizing: border-box;
     }
-    .l-page .page-preview .date-tags p {
+    .l-page .page-preview .meta p {
       margin: 0;
       color: rgba(0,0,0,0.8);
-      font-size: 0.8em;
+      font-size: 0.75em;
+    }
+    .l-page .page-preview .meta .kind {
+      display: inline;
+      padding: 0.3em 0.5em;
+      border: solid rgba(0,0,0,0.4) 1px;
+      border-radius: 3px;
+      font-size: 0.6em;
+      text-transform: uppercase;
     }
     .l-page .page-preview .title-desc .title{
       color: rgba(0,0,0,0.8);
@@ -102,9 +110,11 @@
       <a class="page-link" target="_blank" href="{{ .RelPermalink }}">
         <li class="page">
           <div class="page-preview">
-            <div class="date-tags">
+            <div class="meta">
               <p>{{ dateFormat "Jan 2, 2006" .Date }}</p>
-              <!-- TODO: Add kind/tags -->
+              {{ if .Params.Kind }}
+                <p class="kind">{{ .Params.Kind }}</p>
+              {{ end }}
             </div>
             <div class="title-desc">
               <h1 class="title">{{ .Title }}</h1>
