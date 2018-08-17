@@ -3,6 +3,7 @@ title = "About Hugo"
 date = "2014-04-09"
 description = "This page is about Hugo."
 kind = "info"
+thumbnail = "https://i.ytimg.com/vi/qtIqKaDlqXo/maxresdefault.jpg"
 
 [[dAuthors]]
 author = "Steve Francia"
