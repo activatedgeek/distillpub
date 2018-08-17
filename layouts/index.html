@@ -52,12 +52,12 @@
       pointer-events: none;
     }
 
-    .l-page .paginated-list {
+    .l-page .posts-list {
       padding: 0;
       list-style: none;
     }
 
-    .l-page .paginated-list .sep {
+    .l-page .posts-list .sep {
       display: block;
       height: 1px;
       border: 0;
@@ -66,7 +66,7 @@
       padding: 0;
     }
 
-    .l-page .paginated-list .page-link {
+    .l-page .posts-list .page-link {
       text-decoration: none;
     }
 
@@ -105,7 +105,7 @@
   </style>
 
   {{ $paginator := .Paginate .Pages }}
-  <ul class="paginated-list">
+  <ul class="posts-list">
     {{ range $paginator.Pages }}
       <a class="page-link" target="_blank" href="{{ .RelPermalink }}">
         <li class="page">
