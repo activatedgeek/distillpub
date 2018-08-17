@@ -6,6 +6,11 @@ kind = "info"
 thumbnail = "https://i.ytimg.com/vi/qtIqKaDlqXo/maxresdefault.jpg"
 
 [distill]
+  [distill.supportFiles]
+  dtitle = "dtitle.html"
+  appendix = "appendix.html"
+  bibliography = "distill.bib"
+
   [[distill.authors]]
   author = "Steve Francia"
   authorURL = "http://spf13.com/"

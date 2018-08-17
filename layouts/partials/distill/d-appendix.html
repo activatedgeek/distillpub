@@ -1,21 +1,17 @@
 <d-appendix>
-  {{ with $dAppendixFile := (printf "%s%s" .Dir "d-appendix.pub") }}
-    {{ if (fileExists $dAppendixFile) }}
-      {{ readFile $dAppendixFile | safeHTML }}
-    {{ end }}
+  {{ if and (.Params.Distill.SupportFiles.Appendix) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.Appendix))) }}
+    {{ readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.Appendix) | safeHTML }}
   {{ end }}
 
   {{ if .Site.Params.SourcePrefix }}
-    {{ $srcFile := (printf "%s/content/%s" .Site.Params.SourcePrefix .Dir) }}
+    {{ $srcFileURL := (printf "%s/content/%s" .Site.Params.SourcePrefix .Dir) }}
     <h3>Updates and Corrections</h3>
     <p>If you see mistakes or want to suggest changes, please create issues or revisions against
-      <a target="_blank" href="{{ $srcFile }}">source</a>.
+      <a target="_blank" href="{{ $srcFileURL }}">source</a>.
     </p>
   {{ end }}
 
-  {{ with $dBibFile := (printf "%s%s" .Dir "distill.bib") }}
-    {{ if (fileExists $dBibFile) }}
-      <d-bibliography src="{{ $.Page.RelPermalink }}distill.bib"></d-bibliography>
-    {{ end }}
+  {{ if and (.Params.Distill.SupportFiles.Bibliography) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.Bibliography))) }}
+    <d-bibliography src="{{ .RelPermalink }}{{ .Params.Distill.SupportFiles.Bibliography }}"></d-bibliography>  
   {{ end }}
 </d-appendix>
