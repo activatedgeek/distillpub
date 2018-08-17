@@ -1,51 +1,11 @@
-{{ define "content" }}
+{{ define "body" }}
 
-<d-front-matter>
-  <script type="text/json">{
-    "title": "{{ .Title }}",
-    "description": "{{ .Description }}",
-    "published": "{{ dateFormat "Jan 2, 2006" .Date }}",
-    "authors": [
-      {{- if .Params.DAuthors -}}
-      {{- range $ax, $author := .Params.DAuthors }}
-        {
-          "author": "{{ $author.author }}",
-          "authorURL": "{{ $author.authorURL }}",
-          "affiliations": [
-            {{ range $bx, $affiliation := $author.affiliations }}
-              {
-                "name": "{{ $affiliation.name }}",
-                "url": "{{ $affiliation.url }}"
-              }{{ if (lt (add $bx 1) (len $author.affiliations)) }},{{ end }}
-            {{ end }}
-          ]
-        }{{ if (lt (add $ax 1) (len $.Params.DAuthors)) }},{{ end }}
-      {{- end -}}
-      {{- end }}
-    ],
-    "katex": {
-      "delimiters": [
-        {"left": "$$", "right": "$$", "display": false}
-      ]
-    }
-  }</script>
-</d-front-matter>
+{{ partial "distill/d-front-matter" . }}
 
-<d-title>
-  <!-- TODO: Parametrize this section. How? -->
-</d-title>
+{{ partial "distill/d-title" . }}
 
-<d-article>
-  <!-- TODO: Parametrize this section. How? -->
-  {{ .Content }}
-</d-article>
+{{ partial "distill/d-article" . }}
 
-<d-appendix>
-  <!-- TODO: Parametrize this section. How? -->
-
-  {{ if .Page.Params.Bibliography }}
-    <d-bibliography src="{{ .Page.Params.Bibliography }}"></d-bibliography>
-  {{ end }}
-</d-appendix>
+{{ partial "distill/d-appendix" . }}
 
 {{ end }}

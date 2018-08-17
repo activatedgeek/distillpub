@@ -1,6 +1,7 @@
 +++
 title = "About Hugo"
 date = "2014-04-09"
+description = "This page is about Hugo."
 
 [[dAuthors]]
 author = "Steve Francia"
