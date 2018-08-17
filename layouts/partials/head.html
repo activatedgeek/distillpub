@@ -31,10 +31,9 @@
   <meta name="author" content='{{ delimit .Authors "," }}' />
 {{- end -}}
 
-<!-- TODO: Icons -->
-<link rel="icon" sizes="192x192" href="/path/to/icon.png">
-<link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
-<link rel="mask-icon" href="/path/to/icon.svg" color="{{ .Site.Params.color }}">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<link rel="mask-icon" href="/favicon.ico">
 
 {{ if .RSSLink -}}
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
