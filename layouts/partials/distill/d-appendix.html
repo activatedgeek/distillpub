@@ -5,6 +5,14 @@
     {{ end }}
   {{ end }}
 
+  {{ if .Site.Params.SourcePrefix }}
+    {{ $srcFile := (printf "%s/content/%s" .Site.Params.SourcePrefix .Dir) }}
+    <h3>Updates and Corrections</h3>
+    <p>If you see mistakes or want to suggest changes, please create issues/revisions against
+      <a target="_blank" href="{{ $srcFile }}">source</a>.
+    </p>
+  {{ end }}
+
   {{ with $dBibFile := (printf "%s%s" .Dir "distill.bib") }}
     {{ if (fileExists $dBibFile) }}
       <d-bibliography src="{{ $.Page.RelPermalink }}distill.bib"></d-bibliography>
