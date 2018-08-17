@@ -4,6 +4,9 @@ author = "Sanyam Kapoor"
 canonifyurls = true
 theme = "distillpub"
 
+[taxonomies]
+# TODO: Taxonomies?
+
 [params]
   description = "Distill Hugo Theme Demo"
   keywords = ["hugo", "distill", "theme"]
