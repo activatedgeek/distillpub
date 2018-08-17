@@ -11,13 +11,29 @@ theme = "distillpub"
 
   color = "#0f2e3d"
 
-  [params.social]
-  "a.fab.fa-google" = "https://scholar.google.com/citations?user=p0NMtgsAAAAJ"
-  "b.fab.fa-github" = "https://github.com/activatedgeek/distillpub"
-  "c.fab.fa-hacker-news" = "https://news.ycombinator.com/user?id=activatedgeek"
-  "d.fab.fa-linkedin" = "https://linkedin.com/in/sanyamkapoor"
-  "e.fab.fa-stack-overflow" = "https://stackoverflow.com/users/2425365"
-  "f.fab.fa-twitter" = "https://twitter.com/activatedgeek"
+  [[params.social]]
+  class = "fab fa-google"
+  url = "https://scholar.google.com/citations?user=p0NMtgsAAAAJ"
+
+  [[params.social]]
+  class = "fab fa-github"
+  url = "https://github.com/activatedgeek"
+
+  [[params.social]]
+  class = "fab fa-hacker-news"
+  url = "https://news.ycombinator.com/user?id=activatedgeek"
+
+  [[params.social]]
+  class = "fab fa-linkedin"
+  url = "https://linkedin.com/in/sanyamkapoor"
+
+  [[params.social]]
+  class = "fab fa-stack-overflow"
+  url = "https://stackoverflow.com/users/2425365"
+
+  [[params.social]]
+  class = "fab fa-twitter"
+  url = "https://twitter.com/activatedgeek"
 
 [menu]
 
