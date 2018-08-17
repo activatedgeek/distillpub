@@ -12,7 +12,7 @@
   <style>
     .l-page {
       box-sizing: border-box;
-      padding: 5em 10em;
+      padding: 5em 5em;
     }
 
     .l-page .pagination {
@@ -52,41 +52,38 @@
       pointer-events: none;
     }
 
-    .l-page .posts-list {
-      padding: 0;
-      list-style: none;
-    }
-
-    .l-page .posts-list .sep {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      margin: 1em 0;
-      padding: 0;
-    }
-
-    .l-page .posts-list .page-link {
+    .l-page .posts-list .post-preview {
       text-decoration: none;
+      overflow: hidden;
+      display: block;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      box-sizing: border-box;
+      padding: 1.5em 0;
+      color: rgba(0,0,0,0.8);
     }
 
-    .l-page .page-preview {
-      display: flex;
-      align-items: center;
-      height: 100%;
+    @media (min-width: 768px) { 
+      .l-page .posts-list .post-preview .metadata {
+        float: left;
+        width: 15%;
+        padding: 1em;
+        box-sizing: border-box;
+      }
     }
-    .l-page .page-preview .meta {
-      align-items: center;
-      justify-content: flex-start;
-      padding: 1em 4em 1em 0;
-      box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      .l-page .posts-list .post-preview .metadata {
+        width: 100%;
+      }
     }
-    .l-page .page-preview .meta p {
+
+    .l-page .posts-list .post-preview .metadata .date {
       margin: 0;
       color: rgba(0,0,0,0.8);
       font-size: 0.75em;
     }
-    .l-page .page-preview .meta .kind {
+
+    .l-page .posts-list .post-preview .metadata .kind {
       display: inline;
       padding: 0.3em 0.5em;
       border: solid rgba(0,0,0,0.4) 1px;
@@ -94,39 +91,54 @@
       font-size: 0.6em;
       text-transform: uppercase;
     }
-    .l-page .page-preview .title-desc .title{
-      color: rgba(0,0,0,0.8);
-      font-weight: 700;
+
+    .l-page .posts-list .post-preview .description {
+      float: left;
+      width: 40%;
     }
-    .l-page .page-preview .title-desc .desc{
-      color: rgba(0,0,0,0.8);
-      font-weight: 400;
+
+    @media (max-width: 768px) {
+      .l-page .posts-list .post-preview .description {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .l-page .posts-list .post-preview .thumbnail {
+        float: right;
+        width: 35%;
+      }
+    }
+
+    .l-page .posts-list .post-preview .thumbnail img {
+      display: block;
+      width: 100%;
+      max-width: 30em;
     }
   </style>
 
   {{ $paginator := .Paginate .Pages }}
-  <ul class="posts-list">
-    {{ range $paginator.Pages }}
-      <a class="page-link" target="_blank" href="{{ .RelPermalink }}">
-        <li class="page">
-          <div class="page-preview">
-            <div class="meta">
-              <p>{{ dateFormat "Jan 2, 2006" .Date }}</p>
-              {{ if .Params.Kind }}
-                <p class="kind">{{ .Params.Kind }}</p>
-              {{ end }}
-            </div>
-            <div class="title-desc">
-              <h1 class="title">{{ .Title }}</h1>
-              <p class="desc">{{ .Params.Description }}</p>
-              <!-- TODO: Add optional image -->
-            </div>
+    <div class="posts-list">
+      {{ range $paginator.Pages }}
+        <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
+          <div class="metadata">
+            <p class="date">{{ dateFormat "Jan 2, 2006" .Date }}</p>
+            {{ if .Params.Kind }}
+              <p class="kind">{{ .Params.Kind }}</p>
+            {{ end }}
           </div>
-        </li>
-      </a>
-      <hr class="sep">
-    {{ end }}
-  </ul>
+          <div class="thumbnail">
+            {{ if .Params.Thumbnail }}
+              <img src="{{ .Params.Thumbnail }}">
+            {{ end }}
+          </div>
+          <div class="description">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.Description }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
   
   {{ template "_internal/pagination.html" . }}
 </div>
