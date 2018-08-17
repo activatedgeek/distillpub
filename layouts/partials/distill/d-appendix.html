@@ -8,7 +8,7 @@
   {{ if .Site.Params.SourcePrefix }}
     {{ $srcFile := (printf "%s/content/%s" .Site.Params.SourcePrefix .Dir) }}
     <h3>Updates and Corrections</h3>
-    <p>If you see mistakes or want to suggest changes, please create issues/revisions against
+    <p>If you see mistakes or want to suggest changes, please create issues or revisions against
       <a target="_blank" href="{{ $srcFile }}">source</a>.
     </p>
   {{ end }}
