@@ -5,21 +5,27 @@ description = "This page is about Hugo."
 kind = "info"
 thumbnail = "https://i.ytimg.com/vi/qtIqKaDlqXo/maxresdefault.jpg"
 
-[[dAuthors]]
-author = "Steve Francia"
-authorURL = "http://spf13.com/"
+[distill]
+  [distill.supportFiles]
+  dtitle = "dtitle.html"
+  appendix = "appendix.html"
+  bibliography = "distill.bib"
 
-  [[dAuthors.affiliations]]
-  name = "Google"
-  url = "https://google.com"
+  [[distill.authors]]
+  author = "Steve Francia"
+  authorURL = "http://spf13.com/"
 
-[[dAuthors]]
-author = "Bjørn Erik Pedersen"
-authorURL = "https://bep.is/"
+    [[distill.authors.affiliations]]
+    name = "Google"
+    url = "https://google.com"
 
-  [[dAuthors.affiliations]]
-  name = "BEP Consulting"
-  url = "https://bepsays.com/en/"
+  [[distill.authors]]
+  author = "Bjørn Erik Pedersen"
+  authorURL = "https://bep.is/"
+
+    [[distill.authors.affiliations]]
+    name = "BEP Consulting"
+    url = "https://bepsays.com/en/"
 +++
 
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.

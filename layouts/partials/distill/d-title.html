@@ -1,7 +1,5 @@
 <d-title>
-  {{ with $dTitleFile := (printf "%s%s" .Dir "d-title.pub") }}
-    {{ if (fileExists $dTitleFile) }}
-    {{ readFile $dTitleFile | safeHTML }}
-    {{ end }}
+  {{ if and (.Params.Distill.SupportFiles.DTitle) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle))) }}
+    {{ readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle) | safeHTML }}
   {{ end }}
 </d-title>

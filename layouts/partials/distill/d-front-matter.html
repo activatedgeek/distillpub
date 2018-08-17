@@ -4,8 +4,7 @@
     "description": "{{ .Params.Description }}",
     "published": "{{ dateFormat "Jan 2, 2006" .Date }}",
     "authors": [
-      {{- if .Params.DAuthors -}}
-      {{- range $ax, $author := .Params.DAuthors }}
+      {{- range $ax, $author := .Params.Distill.Authors }}
         {
           "author": "{{ $author.author }}",
           "authorURL": "{{ $author.authorURL }}",
@@ -17,9 +16,8 @@
               }{{ if (lt (add $bx 1) (len $author.affiliations)) }},{{ end }}
             {{ end }}
           ]
-        }{{ if (lt (add $ax 1) (len $.Params.DAuthors)) }},{{ end }}
+        }{{ if (lt (add $ax 1) (len $.Params.Distill.Authors)) }},{{ end }}
       {{- end -}}
-      {{- end }}
     ],
     "katex": {
       "delimiters": [
