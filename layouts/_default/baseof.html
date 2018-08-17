@@ -15,15 +15,15 @@
 </head>
 <body>
   {{ block "header" . }}
-    {{ partial "dt/header" . }}
+    {{ partial "distill/header" . }}
   {{ end }}
   
-  {{ block "content" . }}
-  <!-- Add Content Here -->
+  {{ block "body" . }}
+  <!-- Add Body Here -->
   {{ end }}
 
   {{ block "footer" . }}
-    {{ partial "dt/footer" . }}
+    {{ partial "distill/footer" . }}
   {{ end }}
 </body>
 </html>

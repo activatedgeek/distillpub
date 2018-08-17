@@ -1,4 +1,4 @@
-{{ define "content" }}
+{{ define "body" }}
 <d-front-matter>
   <script type="text/json">{
     "title": "{{ .Title }}",
@@ -108,7 +108,7 @@
             </div>
             <div class="title-desc">
               <h1 class="title">{{ .Title }}</h1>
-              <p class="desc">{{ .Description }}</p>
+              <p class="desc">{{ .Params.Description }}</p>
               <!-- TODO: Add optional image -->
             </div>
           </div>

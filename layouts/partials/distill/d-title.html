@@ -1,0 +1,7 @@
+<d-title>
+  {{ with $dTitleFile := (printf "%s%s" .Dir "d-title.pub") }}
+    {{ if (fileExists $dTitleFile) }}
+    {{ readFile $dTitleFile | safeHTML }}
+    {{ end }}
+  {{ end }}
+</d-title>
