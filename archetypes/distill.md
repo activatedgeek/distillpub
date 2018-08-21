@@ -5,9 +5,9 @@ thumbnail = ""
 
 [distill]
   [distill.supportFiles]
-  dtitle = ""
-  appendix = ""
-  bibliography = ""
+  dtitle = "dtitle.html"
+  appendix = "appendix.html"
+  bibliography = "refs.bib"
 
   [[distill.authors]]
   author = ""
