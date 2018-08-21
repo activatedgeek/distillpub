@@ -2,8 +2,8 @@
 
 <d-front-matter>
   <script type="text/json">{
-    "title": "{{ .Site.Title }}",
-    "description": "{{ .Site.Params.Description }}",
+    "title": "{{ .Title }}",
+    "description": "{{ .Params.Description }}",
     "authors": []
   }</script>
 </d-front-matter>
@@ -36,11 +36,11 @@
     }
 
     .l-page .pagination > :nth-child(n+3):nth-last-child(n+3) {
-      border: solid {{ .Site.Params.color }} 1px;
+      border: solid "{{ .Site.Params.color }}" 1px;
     }
 
     .l-page .pagination .page-item.active {
-      background-color: {{ .Site.Params.color }};
+      background-color: "{{ .Site.Params.color }}";
       border: none;
     }
 
@@ -95,6 +95,11 @@
     .l-page .posts-list .post-preview .description {
       float: left;
       width: 40%;
+      line-height: 2.5em;
+    }
+
+    .l-page .posts-list .post-preview .description h1 {
+      margin-top: 0;
     }
 
     @media (max-width: 768px) {
@@ -117,28 +122,23 @@
     }
   </style>
 
-  {{ $paginator := .Paginate .Pages }}
-    <div class="posts-list">
-      {{ range $paginator.Pages }}
-        <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
-          <div class="metadata">
-            <p class="date">{{ dateFormat "Jan 2, 2006" .Date }}</p>
-            {{ if .Params.Kind }}
-              <p class="kind">{{ .Params.Kind }}</p>
-            {{ end }}
-          </div>
-          <div class="thumbnail">
-            {{ if .Params.Thumbnail }}
-              <img src="{{ .Params.Thumbnail }}">
-            {{ end }}
-          </div>
-          <div class="description">
-            <h1>{{ .Title }}</h1>
-            <p>{{ .Params.Description }}</p>
-          </div>
-        </a>
-      </div>
+  
+  <div class="posts-list">
+    {{ $paginator := .Paginate .Pages }}
+    {{ range $paginator.Pages }}
+      <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
+        <div class="metadata">
+          <p class="date">{{ dateFormat "Jan 2, 2006" .Date }}</p>
+          <p class="kind">{{ .Params.Kind }}</p>
+        </div>
+        <div class="thumbnail"><img src="{{ .Params.Thumbnail }}"></div>
+        <div class="description">
+          <h1>{{ .Title }}</h1>
+          <p>{{ .Params.Description }}</p>
+        </div>
+      </a>
     {{ end }}
+  </div>
   
   {{ template "_internal/pagination.html" . }}
 </div>
