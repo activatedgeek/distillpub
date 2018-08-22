@@ -1,6 +1,6 @@
 # DistillPub
 
-![Status Alpha](https://img.shields.io/badge/status-alpha-orange.svg)
+![Status Alpha](https://img.shields.io/badge/status-beta-yellow.svg)
 
 [![Netlify](https://www.netlify.com/img/global/badges/netlify-color-bg.svg)](https://distillpub.sanyamkapoor.com/)
 
