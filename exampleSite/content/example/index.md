@@ -2,9 +2,10 @@
 title = "Attention and Augmented Recurrent Neural Networks"
 description = "This is a demo article."
 date = "2017-01-10"
-kind = "demo"
 thumbnail = ""
-categories = []
+categories = [
+  "demo"
+]
 tags = []
 
 [distill]

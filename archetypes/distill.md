@@ -1,6 +1,5 @@
 +++
 description = ""
-kind = ""
 thumbnail = ""
 categories = []
 tags = []

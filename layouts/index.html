@@ -126,8 +126,10 @@
       <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
         <div class="metadata">
           <p class="date">{{ dateFormat "Jan 2, 2006" .Date }}</p>
-          {{ if .Params.Kind }}
-            <p class="kind">{{ .Params.Kind }}</p>
+          {{ if .Params.Categories }}
+          {{ if gt (len .Params.Categories) 0 }}
+            <p class="kind">{{ index .Params.Categories 0 }}</p>
+          {{ end }}
           {{ end }}
         </div>
         <div class="thumbnail"><img src="{{ .Params.Thumbnail }}"></div>
