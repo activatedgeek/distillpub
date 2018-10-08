@@ -1,7 +1,8 @@
 +++
 description = ""
-kind = ""
 thumbnail = ""
+categories = []
+tags = []
 
 [distill]
   [distill.supportFiles]
