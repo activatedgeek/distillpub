@@ -1,8 +1,13 @@
 +++
+# All attributes are optional
+
 description = ""
 thumbnail = ""
 categories = []
 tags = []
+
+disableByline = false
+listrender = true
 
 [distill]
   [distill.supportFiles]
