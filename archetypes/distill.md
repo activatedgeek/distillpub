@@ -4,6 +4,8 @@ thumbnail = ""
 categories = []
 tags = []
 
+disableByline = false
+
 [distill]
   [distill.supportFiles]
   dtitle = "dtitle.html"
