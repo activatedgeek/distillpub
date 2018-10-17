@@ -121,7 +121,7 @@
 
   
   <div class="posts-list">
-    {{ $paginator := .Paginate .Pages }}
+    {{ $paginator := .Paginate (where .Pages "Params.listrender" "!=" false) }}
     {{ range $paginator.Pages }}
       <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
         <div class="metadata">
@@ -131,6 +131,7 @@
             <p class="kind">{{ index .Params.Categories 0 }}</p>
           {{ end }}
           {{ end }}
+          <p class="kind">{{ .Kind }}</p>
         </div>
         <div class="thumbnail"><img src="{{ .Params.Thumbnail }}"></div>
         <div class="description">
