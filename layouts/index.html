@@ -80,6 +80,12 @@
       font-size: 0.75em;
     }
 
+    .l-page .posts-list .post-preview .metadata .rtime {
+      margin: 0;
+      color: rgba(0,0,0,0.8);
+      font-size: 0.75em;
+    }
+
     .l-page .posts-list .post-preview .metadata .kind {
       display: inline;
       padding: 0.3em 0.5em;
@@ -131,6 +137,7 @@
             <p class="kind">{{ index .Params.Categories 0 }}</p>
           {{ end }}
           {{ end }}
+          <p class="rtime">&#128339 {{ .ReadingTime }} min read</p>
         </div>
         <div class="thumbnail"><img src="{{ .Params.Thumbnail }}"></div>
         <div class="description">
