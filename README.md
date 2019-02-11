@@ -13,10 +13,6 @@ It is currently based off Distill Template v2.
 
 See deployment at https://distillpub.sanyamkapoor.com.
 
-Provided by
-
-[![Netlify](https://www.netlify.com/img/global/badges/netlify-color-bg.svg)](https://www.netlify.com/)
-
 ## Build
 
 An example site is available to be built. Run
@@ -37,7 +33,7 @@ $ make devel
 
 [Distill](https://distill.pub/) for the amazing [Template](https://github.com/distillpub/template).
 
-[Netlify](https://www.netlify.com/) for deployment.
+[![Netlify](https://www.netlify.com/img/global/badges/netlify-color-bg.svg)](https://www.netlify.com/)
 
 ## License
 
