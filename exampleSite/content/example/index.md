@@ -33,19 +33,17 @@ tags = []
 
 
 <d-abstract>
-  <p>This is the ﬁrst paragraph of the article. Test a long — dash — here it is.</p>
+  This is the ﬁrst paragraph of the article. Test a long — dash — here it is.
 </d-abstract>
 
 This is the ﬁrst paragraph of the article. Test a long — dash — here it is.
-
 Test for owner’s possessive. Test for "quoting a passage." And another sentence. Or two. Some ﬂopping ﬁns; for diving.
-
-<p>Here’s a test of an inline equation <d-math>c = a^2 + b^2</d-math>. And then there’s a block equation:</p>
-<d-math block="">
-    c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
-</d-math>
-<p>We can {{< cite bib="mercier2011humans" >}} also cite {{< cite bib="gregor2015draw,mercier2011humans" >}} external publications. {{< cite bib="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism" >}}</p>
-<p>We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: <d-math>c = \sum_0^i{x}</d-math>. Also, a citation. Box-ception {{< cite bib="gregor2015draw" >}}!</d-footnote> as well.</p>
+Here’s a test of an inline equation {{<math>}}c = a^2 + b^2{{</math>}}. And then there’s a block equation:
+{{<math block="">}}
+  c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
+{{</math>}}
+<p>We can {{<cite bib="mercier2011humans">}} also cite {{<cite bib="gregor2015draw,mercier2011humans">}} external publications. {{<cite bib="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism">}}</p>
+<p>We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: {{<math>}}c = \sum_0^i{x}{{</math>}}. Also, a citation. Box-ception {{<cite bib="gregor2015draw">}}!</d-footnote> as well.</p>
 <table>
   <thead>
     <tr><th>First</th><th>Second</th><th>Third</th></tr>
