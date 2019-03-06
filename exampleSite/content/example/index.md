@@ -35,8 +35,11 @@ tags = []
 <d-abstract>
   <p>This is the ﬁrst paragraph of the article. Test a long — dash — here it is.</p>
 </d-abstract>
-<p>This is the ﬁrst paragraph of the article. Test a long — dash — here it is.</p>
-<p>Test for owner’s possessive. Test for “quoting a passage.” And another sentence. Or two. Some ﬂopping ﬁns; for diving.</p>
+
+This is the ﬁrst paragraph of the article. Test a long — dash — here it is.
+
+Test for owner’s possessive. Test for "quoting a passage." And another sentence. Or two. Some ﬂopping ﬁns; for diving.
+
 <p>Here’s a test of an inline equation <d-math>c = a^2 + b^2</d-math>. And then there’s a block equation:</p>
 <d-math block="">
     c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
