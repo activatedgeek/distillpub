@@ -41,8 +41,8 @@ tags = []
 <d-math block="">
     c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
 </d-math>
-<p>We can<d-cite key="mercier2011humans"></d-cite> also cite <d-cite key="gregor2015draw,mercier2011humans"></d-cite> external publications. <d-cite key="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism"></d-cite></p>
-<p>We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: <d-math>c = \sum_0^i{x}</d-math>. Also, a citation. Box-ception<d-cite key="gregor2015draw"></d-cite>!</d-footnote> as well.</p>
+<p>We can {{< cite bib="mercier2011humans" >}} also cite {{< cite bib="gregor2015draw,mercier2011humans" >}} external publications. {{< cite bib="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism" >}}</p>
+<p>We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: <d-math>c = \sum_0^i{x}</d-math>. Also, a citation. Box-ception {{< cite bib="gregor2015draw" >}}!</d-footnote> as well.</p>
 <table>
   <thead>
     <tr><th>First</th><th>Second</th><th>Third</th></tr>

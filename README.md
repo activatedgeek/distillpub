@@ -9,21 +9,41 @@ with Hugo.
 
 It is currently based off Distill Template v2.
 
-## Docs
+See a hosted demo at https://distillpub.sanyamkapoor.com.
 
-See deployment at https://distillpub.sanyamkapoor.com.
+## Documentation
+
+### Custom Shortcodes
+
+There a few custom shortcodes for common use cases in addition to the presets
+provided by Hugo.
+
+#### Date
+
+```
+{{< date >}}
+```
+
+#### Citations
+
+```
+{{< cite bib="comma,separated,list,of,bib,titles" >}}
+```
+
+Make sure to have relevant `BibTeX` file linked. See [./exampleSite/example/index.md]
+for usage.
 
 ## Build
 
-An example site is available to be built. Run
+The example site can be built by running
 
 ```
 $ make example
 ```
 
-## Development
+### Development
 
-Start a hugo server using and develop!
+Start a hugo server using the following command and develop!
 
 ```
 $ make devel
