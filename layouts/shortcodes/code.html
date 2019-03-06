@@ -1,0 +1,5 @@
+{{- $block := .Get "block" -}}
+{{- $language := .Get "language" -}}
+<d-code {{ if (or $block (eq $block "" )) }} block {{ end }} {{ if $language }} language={{ $language }} {{ end }}>
+{{ .Inner }}
+</d-code>

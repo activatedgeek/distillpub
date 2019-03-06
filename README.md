@@ -21,17 +21,45 @@ provided by Hugo.
 #### Date
 
 ```
-{{< date >}}
+{{<date>}}
 ```
 
 #### Citations
 
 ```
-{{< cite bib="comma,separated,list,of,bib,titles" >}}
+{{<cite bib="comma,separated,list,of,bib,titles">}}
 ```
 
 Make sure to have relevant `BibTeX` file linked. See [./exampleSite/example/index.md]
 for usage.
+
+#### Math
+
+```
+{{<math>}}c^2 = a^2 + b^2{{</math>}}
+```
+
+To use block display, just add the optional named `block` attribute with empty string as
+
+```
+{{<math block="">}}c^2 = a^2 + b^2{{</math>}}
+```
+
+#### Code
+
+```
+{{<code language="python" block="">}}
+# Python 3: Fibonacci series up to n
+def fib(n):
+  a, b = 0, 1
+    while a &lt; n:
+      print(a, end=' ')
+      a, b = b, a+b
+{{</code>}}
+```
+
+`language` and `block` are optional attributes to specify the language and
+block display options respectively.
 
 ## Build
 

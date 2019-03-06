@@ -62,24 +62,24 @@ We should also be testing footnotes<d-footnote>This will become a hoverable foot
 
 ## Displaying code snippets
 
-Some inline javascript:<d-code language="javascript">var x = 25;</d-code>
+Some inline javascript: {{<code language="javascript">}}var x = 25;{{</code>}}
 
 Here’s a javascript code block.
-<d-code block="" language="javascript">
-    var x = 25;
-    function(x){
-      return x * x;
-    }
-</d-code>
+{{<code language="javascript" block="">}}
+var x = 25;
+function(x){
+  return x * x;
+}
+{{</code>}}
 
 We also support python.
-<d-code block="" language="python">
-  # Python 3: Fibonacci series up to n
-  def fib(n):
-    a, b = 0, 1
-      while a &lt; n:
-        print(a, end=' ')
-        a, b = b, a+b
-</d-code>
+{{<code language="python" block="">}}
+# Python 3: Fibonacci series up to n
+def fib(n):
+  a, b = 0, 1
+    while a &lt; n:
+      print(a, end=' ')
+      a, b = b, a+b
+{{</code>}}
 
 That’s it for the example article!
