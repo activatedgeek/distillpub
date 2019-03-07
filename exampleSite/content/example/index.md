@@ -41,7 +41,7 @@ This is the ﬁrst paragraph of the article. Test a long — dash — he
 Test for owner’s possessive. Test for "quoting a passage." And another sentence. Or two. Some ﬂopping ﬁns; for diving.
 
 Here’s a test of an inline equation {{<math>}}c = a^2 + b^2{{</math>}}. And then there’s a block equation:
-{{<math block="">}}
+{{<math block="true">}}
   c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
 {{</math>}}
 
@@ -49,23 +49,18 @@ We can {{<cite bib="mercier2011humans">}} also cite {{<cite bib="gregor2015draw,
 
 We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: {{<math>}}c = \sum_0^i{x}{{</math>}}. Also, a citation. Box-ception {{<cite bib="gregor2015draw">}}!</d-footnote> as well.
 
-<table>
-  <thead>
-    <tr><th>First</th><th>Second</th><th>Third</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>23</td><td>654</td><td>23</td></tr>
-    <tr><td>14</td><td>54</td><td>34</td></tr>
-    <tr><td>234</td><td>54</td><td>23</td></tr>
-  </tbody>
-</table>
+| **First**  | **Second** | **Third** |
+|---|---|---|
+| 23  | 654 | 23  |
+| 14  | 54  | 34  |
+| 234  | 54  | 23  |
 
 ## Displaying code snippets
 
-Some inline javascript: {{<code language="javascript">}}var x = 25;{{</code>}}
+<p>Some inline javascript: {{<code language="javascript">}}var x = 25;{{</code>}}</p>
 
 Here’s a javascript code block.
-{{<code language="javascript" block="">}}
+{{<code language="javascript" block="true">}}
 var x = 25;
 function(x){
   return x * x;
@@ -73,7 +68,7 @@ function(x){
 {{</code>}}
 
 We also support python.
-{{<code language="python" block="">}}
+{{<code language="python" block="true">}}
 # Python 3: Fibonacci series up to n
 def fib(n):
   a, b = 0, 1

@@ -42,13 +42,13 @@ for usage.
 To use block display, just add the optional named `block` attribute with empty string as
 
 ```
-{{<math block="">}}c^2 = a^2 + b^2{{</math>}}
+{{<math block="true">}}c^2 = a^2 + b^2{{</math>}}
 ```
 
 #### Code
 
 ```
-{{<code language="python" block="">}}
+{{<code language="python" block="true">}}
 # Python 3: Fibonacci series up to n
 def fib(n):
   a, b = 0, 1

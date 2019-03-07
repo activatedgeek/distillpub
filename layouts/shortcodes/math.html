@@ -1,4 +1,4 @@
-{{ $block := .Get "block" }}
-<d-math {{ if (or $block (eq $block "" )) }} block {{ end }}>
+{{- $block := .Get "block" -}}
+<d-math {{ if eq $block "true" }} block {{ end }}>
 {{ .Inner }}
 </d-math>
