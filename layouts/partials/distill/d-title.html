@@ -1,5 +1,5 @@
 <d-title>
-  {{ if and (.Params.Distill.SupportFiles.DTitle) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle))) }}
-    {{ readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle) | safeHTML | markdownify }}
-  {{ end }}
+  {{- if and (.Params.Distill.SupportFiles.DTitle) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle))) -}}
+    {{- readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.DTitle) | safeHTML -}}
+  {{- end -}}
 </d-title>
