@@ -24,6 +24,16 @@ provided by Hugo.
 {{<date>}}
 ```
 
+Writes the current date.
+
+#### Footnote
+
+```
+{{<footnote>}}This is a footnote{{</footnote>}}
+```
+
+Write a footnote (composable with other shortcodes).
+
 #### Citations
 
 ```

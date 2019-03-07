@@ -47,7 +47,7 @@ Here’s a test of an inline equation {{<math>}}c = a^2 + b^2{{</math>}}. And th
 
 We can {{<cite bib="mercier2011humans">}} also cite {{<cite bib="gregor2015draw,mercier2011humans">}} external publications. {{<cite bib="dong2014image,dumoulin2016guide,mordvintsev2015inceptionism">}}.
 
-We should also be testing footnotes<d-footnote>This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.</d-footnote>. There are multiple footnotes, and they appear in the appendix<d-footnote>Given I have coded them right. Also, here’s math in a footnote: {{<math>}}c = \sum_0^i{x}{{</math>}}. Also, a citation. Box-ception {{<cite bib="gregor2015draw">}}!</d-footnote> as well.
+We should also be testing footnotes{{<footnote>}}This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote. This will become a hoverable footnote.{{</footnote>}}. There are multiple footnotes, and they appear in the appendix{{<footnote>}}Given I have coded them right. Also, here’s math in a footnote: {{<math>}}c = \sum_0^i{x}{{</math>}}. Also, a citation. Box-ception {{<cite bib="gregor2015draw">}}! {{</footnote>}} as well.
 
 | **First**  | **Second** | **Third** |
 |---|---|---|
@@ -57,7 +57,7 @@ We should also be testing footnotes<d-footnote>This will become a hoverable foot
 
 ## Displaying code snippets
 
-<p>Some inline javascript: {{<code language="javascript">}}var x = 25;{{</code>}}</p>
+Some inline javascript: {{<code language="javascript">}}var x = 25;{{</code>}}
 
 Here’s a javascript code block.
 {{<code language="javascript" block="true">}}
