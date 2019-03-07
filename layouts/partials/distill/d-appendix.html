@@ -1,6 +1,6 @@
 <d-appendix>
   {{ if and (.Params.Distill.SupportFiles.Appendix) (fileExists ((printf "%s%s" .Dir .Params.Distill.SupportFiles.Appendix))) }}
-    {{ readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.Appendix) | safeHTML }}
+    {{ readFile (printf "%s%s" .Dir .Params.Distill.SupportFiles.Appendix) | safeHTML | markdownify }}
   {{ end }}
 
   {{ if .Site.Params.SourcePrefix }}
