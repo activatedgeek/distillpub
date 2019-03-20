@@ -1,0 +1,7 @@
+<div id='{{ .Get "id" }}'></div>
+<script type="text/javascript">
+  var spec = '{{ .Get "spec" }}';
+  vegaEmbed('#{{ .Get "id" }}', spec).then(function(result) {
+    // TOOD: do something?
+  }).catch(console.error);
+</script>
