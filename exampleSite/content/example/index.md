@@ -8,6 +8,8 @@ categories = [
 ]
 tags = []
 
+vega = true
+
 [distill]
   [distill.supportFiles]
   dtitle = "dtitle.html"
@@ -76,5 +78,9 @@ def fib(n):
       print(a, end=' ')
       a, b = b, a+b
 {{</code>}}
+
+And guess what! We also have Vega-Lite embedded graphs!
+
+{{<vega id="viz" spec="https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json">}}
 
 That’s it for the example article!

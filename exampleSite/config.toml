@@ -15,7 +15,7 @@ theme = "distillpub"
   color = "#0f2e3d"
 
   [[params.social]]
-  class = "fab fa-google"
+  class = "fas fa-user-graduate"
   url = "https://scholar.google.com/citations?user=p0NMtgsAAAAJ"
 
   [[params.social]]

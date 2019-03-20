@@ -13,6 +13,10 @@ See a hosted demo at https://distillpub.sanyamkapoor.com.
 
 ## Documentation
 
+### Front Matter
+
+For an up-to-date list of front matter options, see [distill.md](./archetypes/distill.md).
+
 ### Custom Shortcodes
 
 There a few custom shortcodes for common use cases in addition to the presets
@@ -40,7 +44,7 @@ Write a footnote (composable with other shortcodes).
 {{<cite bib="comma,separated,list,of,bib,titles">}}
 ```
 
-Make sure to have relevant `BibTeX` file linked. See [./exampleSite/example/index.md]
+Make sure to have relevant `BibTeX` file linked. See [index.md](./exampleSite/content/example/index.md)
 for usage.
 
 #### Math
@@ -70,6 +74,21 @@ def fib(n):
 
 `language` and `block` are optional attributes to specify the language and
 block display options respectively.
+
+#### Vega Embedded Graphs
+
+You can also embed fully interactive graphs via `vega-lite` by specifying a unique
+id and the URL to a JSON Vega Grammar specification.
+
+```
+{{<vega id="viz" spec="https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json">}}
+```
+
+You need to add the following parameter to your front matter to make sure the necessary
+libraries are loaded on the desired page.
+```toml
+vega = true
+```
 
 ## Build
 

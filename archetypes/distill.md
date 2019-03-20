@@ -8,6 +8,7 @@ tags = []
 
 disableByline = false
 listrender = true
+vega = false
 
 [distill]
   [distill.supportFiles]
