@@ -40,11 +40,7 @@
       {{ range .Site.Menus.main }}
         <a target="_blank" href="{{ .URL }}">{{ .Title }}</a> 
       {{ end }}
-      {{- if .RSSLink -}}
-        <a target="_blank" href="{{ .RSSLink }}">RSS</a>
-      {{ else if .Site.RSSLink }}
-        <a target="_blank" href="{{ .Site.RSSLink }}">RSS</a>
-      {{- end -}}
+      <a target="_blank" href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}">RSS</a>
     </div>
   </div>
 </d-header>

@@ -64,6 +64,7 @@
         float: left;
         width: 15%;
         padding: 1em;
+        padding-top: 0;
         box-sizing: border-box;
       }
     }
@@ -98,10 +99,10 @@
     .l-page .posts-list .post-preview .description {
       float: left;
       width: 40%;
-      line-height: 2.5em;
+      line-height: 2em;
     }
 
-    .l-page .posts-list .post-preview .description h1 {
+    .l-page .posts-list .post-preview .description h2 {
       margin-top: 0;
     }
 
@@ -141,7 +142,7 @@
         </div>
         <div class="thumbnail"><img src="{{ .Params.Thumbnail }}"></div>
         <div class="description">
-          <h1>{{ .Title }}</h1>
+          <h2>{{ .Title }}</h2>
           <p>{{ .Params.Description }}</p>
         </div>
       </a>
