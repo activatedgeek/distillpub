@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/73affdaf-5f7a-4f87-be36-b8222becb793/deploy-status)](https://distillpub.sanyamkapoor.com)
 ![Status Beta](https://img.shields.io/badge/status-beta-yellow.svg)
-![Hugo Version](https://img.shields.io/badge/Hugo%20Version-0.55%2B-informational.svg)
+![Hugo Version](https://img.shields.io/badge/Hugo%20Version-0.58%2B-informational.svg)
 
 
 
