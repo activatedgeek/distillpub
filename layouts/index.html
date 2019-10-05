@@ -128,7 +128,7 @@
 
   
   <div class="posts-list">
-    {{ $paginator := .Paginate (where .Pages "Params.listrender" "!=" false) }}
+    {{ $paginator := .Paginate (where .Site.RegularPages "Params.listrender" "!=" false) }}
     {{ range $paginator.Pages }}
       <a class="post-preview" target="_blank" href="{{ .RelPermalink }}">
         <div class="metadata">
